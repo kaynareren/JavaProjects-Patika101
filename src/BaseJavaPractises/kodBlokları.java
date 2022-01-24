@@ -5,41 +5,43 @@ import java.util.Scanner;
 public class kodBlokları {
     public static void main(String[] args) {
 
-        int n1, n2, select;
-
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("ENTER THE FIRST NUMBER : ");
-        n1 = input.nextInt();
-        System.out.print("ENTER THE SECOND NUMBER : ");
-        n2 = input.nextInt();
-
-        System.out.println("1-ADD\n2-SUBTRACT\n3-MULTIPLY\n4-DIVIDE");
-        System.out.print("SELECT : ");
-        select = input.nextInt();
+        String userName,password,yeniSifre,cevap;
+        Boolean Evet=true, Hayir=false;
 
 
-        switch (select) {
-            case 1:
-                System.out.println("EQUALS : " + (n1 + n2));
-                break;
-            case 2:
-                System.out.println("EQUALS : " + (n1 - n2));
-                break;
-            case 3:
-                System.out.println("EQUALS : " + (n1 * n2));
-                break;
-            case 4:
-                if (n2 == 0) {
-                    System.out.println("NO NUMBER IS DIVIDED BY ZERO !!");
-                    break;
-                } else {
-                    System.out.println("EQUALS : " + (n1 / n2));
-                }
-            default:
-                System.out.println("ERROR");
-                break;
+
+        Scanner inp = new Scanner(System.in);
+
+
+        System.out.print("Kullanıcı adını giriniz: ");
+        userName = inp.nextLine();
+
+
+        System.out.print("Şifrenizi giriniz: ");
+        password = inp.nextLine();
+
+
+        if (userName.equals("patika") && password.equals("java123")) {
+            System.out.println("Giriş Yaptınız! ");
+        }else {
+            System.out.println("Kullanıcı adı veya Şifreniz hatalı!!! ");
+
+
+            System.out.println("Yeni şifre almak ister misiniz?  (Evet) veya (Hayir) olarak cevaplayınız. ");
+            cevap = inp.nextLine();
+            cevap = (Evet) ? "Yeni şifrenizi giriniz:" : "Programı kapatabilirsiniz.";
+
+            System.out.println("Yeni şifrenizi giriniz: ");
+            yeniSifre = inp.nextLine();
+            if (yeniSifre.equals("java123")){
+                System.out.println("Şifre oluşturulamadı, lütfen başka şifre deneyiniz... ");
+            }else{
+                System.out.println("Yeni şifre oluşturuldu...");
+            }
 
         }
+
+            }
     }
-}
+
+
