@@ -1,0 +1,25 @@
+package giris;
+
+import java.util.Scanner;
+
+public class Baslangic {
+    public static void main(String[] args) {
+
+        int yıl;
+
+       Scanner input = new Scanner(System.in);
+
+        System.out.println("ARTIK YIL HESAPLAMA");
+        System.out.println("Bir yıl giriniz : ");
+        yıl = input.nextInt();
+
+        if ( yıl % 4 == 0) {
+            System.out.print(+ yıl);
+            System.out.println(" Artık bir yıldır.");
+        } else {
+            System.out.print(+ yıl);
+            System.out.println(" Artık bir yıl değildir.");
+        }
+
+    }
+}
