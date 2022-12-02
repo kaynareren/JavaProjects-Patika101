@@ -1,0 +1,104 @@
+package giris;
+
+import java.util.Scanner;
+
+public class Baslangic {
+    public static void main(String[] args) {
+
+    int ay , gun;
+
+    Scanner input = new Scanner(System.in);
+
+        System.out.println("Doğduğunuz Ay : ");
+        ay = input.nextInt();
+
+        System.out.println("Doğduğunuz Gün : ");
+        gun = input.nextInt();
+
+        if ( ay == 1 &&  gun <= 31 ) {
+            if ( gun <= 21) {
+                System.out.println("OĞLAK Burcusunuz. ");
+            } else {
+                System.out.println("KOVA Burcusunuz. ");
+            }
+        }
+        if ( ay == 2 &&  gun <= 29 ) {
+            if ( gun <= 20) {
+                System.out.println("KOVA Burcusunuz. ");
+            } else {
+                System.out.println("BALIK Burcusunuz. ");
+            }
+        }
+        if ( ay == 3 &&  gun <= 31 ) {
+            if ( gun <= 21) {
+                System.out.println("BALIK Burcusunuz. ");
+            } else {
+                System.out.println("KOÇ Burcusunuz. ");
+            }
+        }
+        if ( ay == 4 &&  gun <= 30 ) {
+            if ( gun <= 21) {
+                System.out.println("KOÇ Burcusunuz. ");
+            } else {
+                System.out.println("BOĞA Burcusunuz. ");
+            }
+        }
+        if ( ay == 5 &&  gun <= 31 ) {
+            if ( gun <= 21) {
+                System.out.println("BOĞA Burcusunuz. ");
+            } else {
+                System.out.println("İKİZLER Burcusunuz. ");
+            }
+        }
+        if ( ay == 6 &&  gun <= 30 ) {
+            if ( gun <= 23) {
+                System.out.println("İKİZLER Burcusunuz. ");
+            } else {
+                System.out.println("YENGEÇ Burcusunuz. ");
+            }
+        }
+        if ( ay == 7 &&  gun <= 31 ) {
+            if ( gun <= 23) {
+                System.out.println("YENGEÇ Burcusunuz. ");
+            } else {
+                System.out.println("ASLAN Burcusunuz. ");
+            }
+        }
+        if ( ay == 8 &&  gun <= 31 ) {
+            if ( gun <= 23) {
+                System.out.println("ASLAN Burcusunuz. ");
+            } else {
+                System.out.println("BAŞAK Burcusunuz. ");
+            }
+        }
+        if ( ay == 9 &&  gun <= 30 ) {
+            if ( gun <= 23) {
+                System.out.println("BAŞAK Burcusunuz. ");
+            } else {
+                System.out.println("TERAZİ Burcusunuz. ");
+            }
+        }
+        if ( ay == 10 &&  gun <= 31 ) {
+            if ( gun <= 23) {
+                System.out.println("TERAZİ Burcusunuz. ");
+            } else {
+                System.out.println("AKREP Burcusunuz. ");
+            }
+        }
+        if ( ay == 11 &&  gun <= 30 ) {
+            if ( gun <= 21) {
+                System.out.println("AKREP Burcusunuz. ");
+            } else {
+                System.out.println("YAY Burcusunuz. ");
+            }
+        }
+        if ( ay == 12 &&  gun <= 31 ) {
+            if ( gun <= 21) {
+                System.out.println("YAY Burcusunuz. ");
+            } else {
+                System.out.println("OĞLAK Burcusunuz. ");
+            }
+        }
+
+    }
+}
