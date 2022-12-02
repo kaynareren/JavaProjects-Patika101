@@ -1,0 +1,69 @@
+package giris;
+
+import java.util.Scanner;
+
+public class Baslangic {
+    public static void main(String[] args) {
+
+    int yas , mesafe , tip , yas2;
+    double biletFiyatı;
+
+    Scanner input = new Scanner(System.in);
+
+        System.out.println("Yaşınızı giriniz : ");
+        yas = input.nextInt();
+
+        System.out.println("Uçuş Mesafenizi Girin : ");
+        mesafe = input.nextInt();
+
+        System.out.println("Uçuş tipininizi seçin ( 1 - Tek yön , 2 - gidiş-dönüş) : ");
+        tip = input.nextInt();
+
+        if (yas <= 12) {
+            System.out.println("1. Kategoridesiniz.");
+        } else if (yas >= 64 ) {
+            System.out.println("3. Kategoridesiniz.");
+        } else {
+            System.out.println("2. Kategoridesiniz.");
+        }
+
+        System.out.println("Hangi Kategoride Olduğunuzu Girin : ");
+        yas2 = input.nextInt();
+
+        switch (yas2) {
+            case 1:
+                switch (tip) {
+                    case 1:
+                       biletFiyatı = mesafe * 0.1 / 2;
+                        System.out.println("Biletinizin Fiyatı : " + biletFiyatı);
+
+                    case 2:
+                        biletFiyatı = (mesafe * 0.1) - ((mesafe * 0.1) / 5);
+                        System.out.println("Biletinizin Fiyatı : " + biletFiyatı);
+                }
+            case 2:
+                switch (tip) {
+                    case 1:
+                        biletFiyatı = (mesafe * 0.1) - ((mesafe * 0.1) / 10) ;
+                        System.out.println("Biletinizin Fiyatı : " + biletFiyatı);
+
+                    case 2:
+                        biletFiyatı = (mesafe * 0.2) - ((mesafe * 0.1) / 5);
+                        System.out.println("Biletinizin Fiyatı : " + biletFiyatı);
+                }
+            case 3:
+                switch (tip) {
+                    case 1:
+                        biletFiyatı = (mesafe * 0.1) - ((mesafe * 0.1) / 10 * 3) ;
+                        System.out.println("Biletinizin Fiyatı : " + biletFiyatı);
+
+                    case 2:
+                        biletFiyatı = ((mesafe * 0.2) - ((mesafe * 0.2) / 10 * 3)) - ((mesafe * 0.1) / 5);
+                        System.out.println("Biletinizin Fiyatı : " + biletFiyatı);
+                }
+        }
+
+
+
+    }
+}
