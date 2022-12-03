@@ -1,0 +1,24 @@
+package giris;
+
+import java.util.Scanner;
+
+public class Baslangic {
+    public static void main(String[] args) {
+
+
+
+    Scanner eren = new Scanner(System.in);
+
+        int number;
+        double total = 0,numb;
+        System.out.print("Sayıyı Giriniz: ");
+        number = eren.nextInt();
+        for (int i = 1; i <= number; i++) {
+            numb = (1.0 / i);
+            total += numb;
+
+
+        }
+        System.out.println(total);
+    }
+}
