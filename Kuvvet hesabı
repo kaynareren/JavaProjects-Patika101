@@ -1,0 +1,23 @@
+package giris;
+
+import java.util.Scanner;
+
+public class Baslangic {
+    public static void main(String[] args) {
+
+    int a , b , i , total = 1;
+
+    Scanner eren = new Scanner(System.in);
+
+        System.out.print("Üssü alınacak sayıyı giriniz : ");
+        a = eren.nextInt();
+        System.out.print("Üs alınacak sayıyı giriniz : ");
+        b = eren.nextInt();
+
+        for (i = 1; i<= b; i++) {
+            total *= a;
+        }
+        System.out.println("Sonuc : " +total);
+
+    }
+}
