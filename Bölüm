@@ -1,0 +1,29 @@
+package giris;
+
+import java.util.Scanner;
+
+public class Baslangic {
+    public static void main(String[] args) {
+
+        int a , sayi=0 , ortalama , toplam=0;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Bir sayi giriniz : ");
+        a = input.nextInt();
+
+        for(int i=0;i<=a;i++) {
+            if (i%3==0 || i%4==0){
+                sayi+=1;
+                toplam+=i;
+            }
+            //System.out.println(i);
+        }
+
+        ortalama = toplam / sayi;
+
+        System.out.println("toplam sayi : " +toplam);
+        System.out.println("Ortalama : " +ortalama);
+
+    }
+}
