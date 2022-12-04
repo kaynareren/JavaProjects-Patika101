@@ -1,0 +1,67 @@
+package giris;
+
+import java.util.Scanner;
+
+public class Baslangic {
+    public static void main(String[] args) {
+
+        String kullaniciAdi , sifre;
+        int dogru = 3 , secim = 0 , miktar , bakiye = 1000;
+
+        Scanner input = new Scanner(System.in);
+
+        while (dogru > 0) {
+
+            System.out.print("Lütfen Kullanıcı Adınızı Girin : ");
+            kullaniciAdi = input.nextLine();
+            System.out.print("Lütfen Şifrenizi Girin : ");
+            sifre = input.nextLine();
+
+            if (kullaniciAdi.equals("eren") && sifre.equals("kaynar123")) {
+                System.out.println("Merhaba , ERENBANK'a Hoşgeldiniz. ");
+                do {
+                    System.out.println("1-Para Yatırma \n" + "2-Para Çekme \n" + "3-Bakiye Sorgulama \n" + "4-Çıkış Yapma");
+                    System.out.print("Lütfen Yapmak İstediğiniz İşlemi Seçin");
+                    secim = input.nextInt();
+
+                    switch (secim) {
+                        case 1:
+                            System.out.println("Yatırmak İstediğiniz Miktar : ");
+                            miktar = input.nextInt();
+                            bakiye += miktar;
+                            break;
+
+
+                        case 2:
+                            System.out.println("Çekmek İstediğiniz Miktar : ");
+                            miktar = input.nextInt();
+                            if (miktar > bakiye) {
+                                System.out.println("Yetersiz Bakiye!!!");
+                            } else {
+                                bakiye -= miktar;
+                            }
+                            break;
+
+                        case 3:
+                            System.out.println("Bakiyeniz : " + bakiye);
+                            break;
+
+                    }
+                } while (secim != 4);
+                System.out.println("Teşekkür Ederiz.");
+                break;
+
+            } else {
+                dogru--;
+                System.out.println("Hatalı Kullanıcı Adı Veya Şifre!! Lütfen Tekrar deneyin");
+                if (dogru == 0) {
+                    System.out.println("Hesabınız Bloke Olmuştur Banka ile İletişime Geçin.");
+                } else {
+                    System.out.println("Kalan Hakkınız : " + dogru);
+                }
+
+            }
+        }
+
+    }
+}
