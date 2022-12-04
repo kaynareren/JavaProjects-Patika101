@@ -1,0 +1,33 @@
+package giris;
+
+import java.util.Scanner;
+
+public class Baslangic {
+    public static void main(String[] args) {
+
+        Scanner eren = new Scanner(System.in);
+
+        int i = 1 , n , sayi , max = 1 , min = 0;
+
+        System.out.println("kaç sayı gireceksiniz : ");
+        n = eren.nextInt();
+
+        while (i <= n) {
+            System.out.println(i + ". Sayıyı Giriniz : ");
+            sayi = eren.nextInt();
+
+            if (i == 1) {
+                max = sayi;
+                min = sayi;
+            }
+            if (sayi > max) {
+                max = sayi;
+            } else if ( sayi < min ) {
+                min = sayi;
+            }
+            i++;
+        }
+        System.out.println("En küçük sayı = " + min);
+        System.out.println("En büyük sayı = " + max);
+    }
+}
