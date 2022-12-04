@@ -1,0 +1,25 @@
+package giris;
+
+import java.util.Scanner;
+
+public class Baslangic {
+    public static void main(String[] args) {
+
+        Scanner eren = new Scanner(System.in);
+
+        int i , n , a = 0 , b = 1 , c;
+
+        System.out.print("Fibonacci Dizisinin Sayısını Girin : ");
+        n = eren.nextInt();
+
+        for (i = 0; i <= n; i++) {
+            c = a + b;
+
+            System.out.println(a);
+
+            a = b;
+            b = c;
+
+          }
+        }
+    }
