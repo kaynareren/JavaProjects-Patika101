@@ -1,0 +1,27 @@
+package giris;
+
+import java.util.Scanner;
+
+public class Baslangic {
+    public static void main(String[] args) {
+
+        Scanner eren = new Scanner(System.in);
+
+        int i , n , sonuc = 0;
+
+        System.out.print("Bir Sayı Giriniz : ");
+        n = eren.nextInt();
+
+        for (i = 1; i < n; i++ ) {
+            if (n % i == 0) {
+                sonuc += i;
+            }
+        }
+        if (sonuc == n) {
+            System.out.println(n + " Mükemmel bir sayıdır.");
+        } else {
+            System.out.println(n + " Mükemmel bir sayı değildir.");
+        }
+
+    }
+}
