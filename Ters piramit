@@ -1,0 +1,20 @@
+package giris;
+
+import java.util.Scanner;
+
+public class Baslangic {
+    public static void main(String[] args) {
+
+        Scanner eren = new Scanner(System.in);
+
+        for (int i=0;i<=10;i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= ((10 * 2) - 1) - (i * 2); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
