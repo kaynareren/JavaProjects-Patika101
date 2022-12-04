@@ -1,0 +1,29 @@
+package giris;
+
+import java.util.Scanner;
+
+public class Baslangic {
+    public static void main(String[] args) {
+
+        Scanner eren = new Scanner(System.in);
+
+        int s1 , s2 , i = 1 , ebob = 1 , ekok;
+
+        System.out.print("Küçük Sayıyı Giriniz : ");
+        s1 = eren.nextInt();
+        System.out.print("Diğer Sayiyi Giriniz : ");
+        s2 = eren.nextInt();
+
+        while (i <= s1) {
+            if (s1 % i ==0 && s2 % i == 0) {
+                 ebob = i;
+            //   System.out.println(i);   İki sayının bütün ortak bölenlerini görmek için aktif edebiliriz.
+            } i++;
+        }
+        ekok = s1 * s2 / ebob;
+        
+        System.out.println(s1 + " Ve " + s2 + " ün EBOBu :" + ebob);
+        System.out.println(s1 + " Ve " + s2 + " ün EKOKu :" + ekok);
+        
+    }
+}
